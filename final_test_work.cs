@@ -4,12 +4,11 @@ string Line = (Console.ReadLine());
 string[] words = Line.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 int LengthString = words.Length;
 int i = 0;
-string[] NewArray = new string[LengthString];
+string[] NewArray = new string[LengthString];// Таким образом мы подстраховываемся от всей строки из 3-значных 
 for (i = 0; i < LengthString; i++)
 {   
     int wordlen = words[i].Length;
-    
-    if (wordlen <=3)
+        if (wordlen <=3)
     {
         NewArray[i] = words[i];
         Console.Write(NewArray[i] + " ");
